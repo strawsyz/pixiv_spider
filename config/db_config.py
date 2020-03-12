@@ -1,12 +1,12 @@
 # -*- coding: UTF-8 -*-
 
 # TEST数据库信息
-# DB_TEST_HOST = "192.168.31.145";
+# DB_TEST_HOST = "192.168.31.145"
 DB_TEST_HOST = "127.0.0.1"
 DB_TEST_PORT = 3306
-DB_TEST_DBNAME = "pixiv"
-DB_TEST_USER = "root"
-DB_TEST_PASSWORD = "syz123456"
+DB_TEST_DBNAME = ""
+DB_TEST_USER = ""
+DB_TEST_PASSWORD = ""
 
 # 数据库连接编码
 DB_CHARSET = "utf8mb4"
