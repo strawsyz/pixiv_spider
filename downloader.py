@@ -109,21 +109,3 @@ class Downloader:
             self.logger.info('one batch is over')
             print('one batch is over')
             time.sleep(interval)
-
-
-if __name__ == '__main__':
-    print('start!')
-    # downloader = Downloader('/home/pi/complete/pixiv/')
-    # stauts小于10表示图片吗，还没有下载好
-    select_sql = 'SELECT url, illust_id, illuster_id, type, page_no ' \
-                 'FROM illust WHERE type = 0 AND status < 10 LIMIT {}'.format(100)
-    headers = get_header('pixiv')
-    interval = 10
-    thread_num = 10
-    try_time = 5
-    request_retry = requests.adapters.HTTPAdapter(max_retries=try_time)
-    downloader = Downloader('D:/pixiv')
-    downloader.main(select_sql, headers, thread_num, interval)
-    # https://i.pximg.net/img-original/img/2016/08/20/08/25/53/58543523_p0.jpg
-    # downloader.download_file('https://i.pximg.net/img-original/img/2018/11/17/20/47/37/71697057_p0.jpg',
-    #                          'D:/pixiv/71697057_p0.jpg', headers)

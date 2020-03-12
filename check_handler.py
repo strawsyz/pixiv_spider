@@ -143,11 +143,3 @@ class checker():
             raise e
 
 
-if __name__ == '__main__':
-    print('start')
-    CHECK_PATH = '/home/pi/complete/pixiv'
-    checker = checker(CHECK_PATH)
-    # checker = checker('D:/Temp/收藏')
-    checker.check_empty_dir(["456433", "thumbnail"])
-    # checker.check(["456433", "thumbnail"])
-    print('ok')
